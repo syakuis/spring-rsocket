@@ -1,0 +1,35 @@
+# Develop or Default profile
+application:
+  name: ${rootProject.name}
+  version: ${version}
+debug: false
+trace: false
+logging:
+  level:
+    root: info
+    org.springframework: info
+    org.springframework.web: info
+    io.github.syakuis: trace
+server:
+  port: 8080
+#  forward-headers-strategy: native
+#  tomcat:
+#    port-header: X-Forwarded-Port
+#    remote-ip-header: X-Forwarded-For
+#    protocol-header: X-Forwarded-Proto
+#    accesslog:
+#      directory:
+#      enabled: false
+#      file-date-format: .yyyy-MM-dd
+spring:
+  config:
+    import:
+      - classpath:properties/datasource-jpa.yml
+      - classpath:properties/logback.yml
+  main:
+    banner-mode: console
+  devtools:
+    livereload:
+      enabled: true
+  messages:
+    basename: i18n/message
