@@ -1,11 +1,11 @@
 // https://docs.spring.io/spring-boot/docs/2.4.5/reference/html/dependency-versions.html#dependency-versions
+// https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle
+// https://docs.spring.io/spring-cloud/docs/2020.0.3/reference/html/
 buildscript {
     ext {
         groupId = "io.github.syaku"
         versionName = "1.0.0-SNAPSHOT"
-        // https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle
         springBootVersion = "2.4.5"
-        // https://docs.spring.io/spring-cloud/docs/2020.0.3/reference/html/
         springCloudVersion = "2020.0.3"
         junitVersion = "5.7.1"
         lombokVersion = "1.18.12"
@@ -28,7 +28,7 @@ buildscript {
 }
 
 wrapper {
-    gradleVersion = "6.5"
+    gradleVersion = "7.2"
 }
 
 apply plugin: "java"
@@ -74,15 +74,11 @@ dependencies {
     annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
     testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
 
-    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
-    implementation "org.springframework.boot:spring-boot-starter-validation"
-
     implementation "org.springframework.boot:spring-boot-starter-undertow"
     implementation "org.springframework.boot:spring-boot-starter-web"
-    // or implementation "org.springframework.boot:spring-boot-starter"
     testImplementation "org.springframework.boot:spring-boot-starter-test"
 
-    testImplementation "org.springframework.cloud:spring-cloud-starter-contract-stub-runner"
+    implementation "org.springframework.boot:spring-boot-starter-rsocket"
 }
 
 sonarqube {

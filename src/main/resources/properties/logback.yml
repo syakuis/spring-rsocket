@@ -9,3 +9,6 @@ logging:
       max-file-size: 10MB
       total-size-cap: 20GB
       max-history: 30
+  level:
+    org.springframework.web: info
+    io.github.syakuis: trace

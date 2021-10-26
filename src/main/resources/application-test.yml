@@ -1,0 +1,4 @@
+spring:
+  main:
+    # https://www.baeldung.com/spring-boot-lazy-initialization
+    lazy-initialization: true

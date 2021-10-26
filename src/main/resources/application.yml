@@ -1,16 +1,11 @@
-# Develop or Default profile
-application:
-  name: ${rootProject.name}
-  version: ${version}
-logging:
-  level:
-    org.springframework.web: info
-    io.github.syakuis: trace
 server:
   port: 8080
 spring:
+  application:
+    name: spring-rsocket
   config:
     import:
       - classpath:properties/logback.yml
+      - classpath:properties/rsocket.yml
   main:
     banner-mode: console
