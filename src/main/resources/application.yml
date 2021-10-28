@@ -9,7 +9,3 @@ spring:
       - classpath:properties/rsocket.yml
   main:
     banner-mode: console
-  mvc:
-    view:
-      prefix: templates/
-      suffix: .html
